@@ -18,7 +18,7 @@ public abstract class Auditable {
     private String createdBy;
 
     @CreatedDate
-    private LocalDateTime creationDate=LocalDateTime.now();
+    private LocalDateTime creationDate;
 
     @LastModifiedBy
     private String lastModifiedBy;
