@@ -1,22 +1,24 @@
 package com.yaz.springit.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class Vote {
     @Id
     @GeneratedValue
     private long id;
     @NonNull
-    private int voting;
+    private short direction;
+
+    @ManyToOne
+    @NonNull
+    private Link link;
 
 
 
